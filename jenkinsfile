@@ -5,7 +5,7 @@ pipeline{
 
         stage('build'){
             steps{
-                sh "sudo yarn install"
+                sh " yarn install"
                 sh "sudo yarn build"
             }
         }
