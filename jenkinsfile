@@ -5,14 +5,14 @@ pipeline{
 
         stage('build'){
             steps{
-                sh " yarn install"
-                sh " yarn build"
+                sh " sudo yarn install"
+                sh " sudo yarn build"
             }
         }
 
         stage('deploy'){
             steps{
-                  sh 'pm2 restart react-nextjs || pm2 start yarn --name "react-nextjs" --start -p 4012'
+                  sh 'sudo pm2 restart react-nextjs || pm2 start yarn --name "react-nextjs" --start -p 4012'
             }
         }
     }
