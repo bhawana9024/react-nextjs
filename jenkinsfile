@@ -12,7 +12,7 @@ pipeline{
 
         stage('deploy'){
             steps{
-                  sh 'sudo pm2 restart "react-nextjs" || pm2 start yarn -- name "react-nextjs" -- start -p 4012'
+                  sh 'sudo pm2 restart "react-nextjs" || pm2 start yarn --name "react-nextjs" -- start -p 4012'
             }
         }
     }
